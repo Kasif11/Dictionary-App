@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ebeaea;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    min-height: 100vh;
+}
+
+.container {
+    /* width: 100%; */
+    /* max-width: 600px; Set a maximum width */
+    margin: 0 auto;
+}
+
+header nav {
+    background-color: #ae9cff;
+    padding: 1rem;
+    /* width: 100vw; */
+    text-align: center; /*Centered for smaller screens*/
+}
+
+header nav h1 {
+    font-size: 2.5rem;
+    text-align: start;
+    margin-left: 50px;
+    font-weight: 600;
+    color: #faf5f5;
+}
+
+.input-box {
+    background-color: #fff;
+    border-radius: 0.3rem;
+    padding: 30px;
+    box-shadow: 0 0 25px #a091e3;
+    margin: auto;
+    display: flex;
+    flex-direction: column; /* Stack input and button vertically on small screens */
+    max-width: 600px;
+    /* width: 100%; Make it take full width */
+    margin-top: 25px;
+}
+
+.input-box #input, .input-box #btn {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.input-box #input {
+    border: none;
+    outline: none;
+    border-bottom: 3px solid #ae9cff;
+    margin-bottom: 20px; /* Added spacing between input and button */
+}
+
+.input-box #btn {
+    background-color: #ae9cff;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer; /* Add pointer to indicate button action */
+}
+
+.input-box #btn:hover {
+    background-color: #a091e3;
+}
+
+.input-box #btn:focus {
+    background-color: transparent;
+    color: #ae9cff;
+    border: 2px solid #ae9cff;
+    box-shadow: 3px 3px 0px #ae9cff;
+}
+
+#result {
+    margin-top: 25px;
+    margin: auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    background-color: #ae9cff;
+    color: white;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .input-box {
+        flex-direction: row; /* For larger screens, input and button side by side */
+        align-items: center;
+    }
+
+    .input-box #input {
+        margin-bottom: 0;
+        margin-right: 10px; /* Added space between input and button */
+    }
+
+    #result {
+        padding: 30px;
+    }
+}
